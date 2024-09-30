@@ -10,7 +10,7 @@ public class StatementAnalyzer {
         return listOfBankTransactions;
     }
 
-    public void setListOfBankTransactions(List<BankTransaction> listOfBankTransactions) {
+    public void setListOfBankTransactions() {
         this.listOfBankTransactions = listOfBankTransactions;
     }
 
@@ -41,12 +41,12 @@ public class StatementAnalyzer {
         return monthlyTransactions;
     }
 
-    public void sortExpenses(List<BankTransaction> listOfBankTransactions) {
+    public void sortExpenses() {
         Collections.sort(listOfBankTransactions, Comparator.comparing(BankTransaction::getAmount));
     }
 
-    public void showTopExpenses(List<BankTransaction> listOfBankTransactions) {
-        sortExpenses(listOfBankTransactions);
+    public void showTopExpenses() {
+        sortExpenses();
         System.out.println("Top 10 expenses");
         System.out.println("---------------");
         for (BankTransaction bankTransaction : listOfBankTransactions) {
@@ -61,8 +61,8 @@ public class StatementAnalyzer {
         }
     }
 
-    public String getMostSpentCategory(List<BankTransaction> listOfBankTransactions) {
-        sortExpenses(listOfBankTransactions);
+    public String getMostSpentCategory() {
+        sortExpenses();
         String mostSpentCategory = listOfBankTransactions.get(0).getCategory();
         return mostSpentCategory;
     }
