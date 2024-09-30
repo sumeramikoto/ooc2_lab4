@@ -1,4 +1,6 @@
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CSVReader extends Reader {
@@ -6,8 +8,10 @@ public class CSVReader extends Reader {
         super(filepath);
     }
 
-    public void readFile() {
+    @Override
+    public void readFile(StatementAnalyzer statement) {
         try {
+            statement.listOfBankTransactions = new ArrayList<>();
             Scanner dataReader = new Scanner(file);
             while(dataReader.hasNextLine()) {
                 String fileData = dataReader.nextLine();
@@ -19,7 +23,7 @@ public class CSVReader extends Reader {
 
                     BankTransaction bankTransaction = new BankTransaction(date, amount, category);
                     parseDateInfo(bankTransaction);
-                    listOfBankTransactions.add(bankTransaction);
+                    statement.listOfBankTransactions.add(bankTransaction);
                 }
             }
 
