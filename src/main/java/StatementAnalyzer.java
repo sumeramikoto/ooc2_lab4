@@ -14,7 +14,7 @@ public class StatementAnalyzer {
         this.listOfBankTransactions = listOfBankTransactions;
     }
 
-    public void determineProfit(List<BankTransaction> listOfBankTransactions) {
+    public void determineProfit() {
         int finalAmount = 0;
         for (BankTransaction bankTransaction : listOfBankTransactions) {
             int transactionAmount = bankTransaction.getAmount();
