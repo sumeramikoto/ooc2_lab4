@@ -3,12 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 abstract class Reader {
-    protected List<BankTransaction> listOfBankTransactions = new ArrayList<>();
-    File file;
+    protected File file;
 
     public Reader(String filepath) {
         this.file = new File(filepath);
     }
 
-    public abstract void readFile();
+    public abstract void readFile(StatementAnalyzer statement);
 }
