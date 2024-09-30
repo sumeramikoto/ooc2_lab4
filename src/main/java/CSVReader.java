@@ -9,7 +9,7 @@ public class CSVReader extends Reader {
     }
 
     @Override
-    public void readFile(StatementAnalyzer statement) {
+    public void readStatement(StatementAnalyzer statement) {
         try {
             statement.listOfBankTransactions = new ArrayList<>();
             Scanner dataReader = new Scanner(file);

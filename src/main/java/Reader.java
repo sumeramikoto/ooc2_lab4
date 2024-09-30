@@ -1,6 +1,4 @@
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 abstract class Reader {
     protected File file;
@@ -9,5 +7,5 @@ abstract class Reader {
         this.file = new File(filepath);
     }
 
-    public abstract void readFile(StatementAnalyzer statement);
+    public abstract void readStatement(StatementAnalyzer statement);
 }

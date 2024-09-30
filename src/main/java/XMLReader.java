@@ -5,7 +5,7 @@ public class XMLReader extends Reader {
     }
 
     @Override
-    public void readFile(StatementAnalyzer statement) {
+    public void readStatement(StatementAnalyzer statement) {
 
     }
 }

@@ -1,4 +1,5 @@
 import org.json.*;
+import java.util.ArrayList;
 
 public class JSONReader extends Reader {
     public JSONReader(String filepath) {
@@ -6,7 +7,7 @@ public class JSONReader extends Reader {
     }
 
     @Override
-    public void readFile(StatementAnalyzer statement) {
+    public void readStatement(StatementAnalyzer statement) {
 
     }
 }
